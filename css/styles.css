@@ -1,0 +1,30 @@
+body {
+    background-image: linear-gradient(black, green);
+    background-attachment: fixed;
+    background-size: cover;
+    color: green;
+}
+
+.container {
+    margin-left: 500px;
+}
+
+div {
+    font-size: x-large;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+
+p {
+    text-transform: uppercase;
+}
+
+p:hover {
+    color: white;
+}
