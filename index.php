@@ -1,5 +1,5 @@
-    <?php
-    $q = array (
+<?php
+$q = array (
         "Complete the sentence, Who let the dogs out....?" => array (
                 'Who, who, who, who' => 'A',
                 'Woof, woof, woof, woof' =>'A',
@@ -14,14 +14,14 @@
                 '30% rain' => 'B',
                 'HOT' => 'B',
         ),
-        
+
         "The oldest game to date?" => array (
                 'Snake on Nokia 3310' => 'C',
                 'Contra' => 'C',
                 'Tetris' => 'C',
                 'Battlefield' => 'C',
         ),
-        
+
         "Where was fortune cookies first made?" => array (
                 'America' => 'D',
                 'China' => 'D',
@@ -140,9 +140,10 @@
                 'Earbud' => 'T',
                 'Koppe' => 'T',
         ),
-    );
+);
 
-    ?>
+?>
+
 
 
 
@@ -155,7 +156,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     <script src="main.js"></script>
     </head>
     <body>
@@ -173,14 +174,28 @@
                 </p>
 
             <?php endforeach; ?>
+            <center><button>SUBMIT</button></center>
         </form>
     </div>
     <div>
         <?php
-            if (condition) {
-                # code...
-            }
+                $correct = 0;
+                if (isset($_POST['answers'])){
+                $answers = $_POST['answers']; 
+  
+
+                foreach ($q as $no => $value){
+        
+                if ($answers[$no] != $value[$answer]){
+                
+                $correct = $correct;
+                        } else {
+                        $correct++;  
+                        }
+                }
         ?>
+
+        <?php } ?>
     </div>
 
     </body>
